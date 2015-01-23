@@ -10,13 +10,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist 3ch3r46/bootui-typeahead "*"
+php composer.phar require --prefer-dist moonlandsoft/bootui-typeahead "*"
 ```
 
 or add
 
 ```
-"3ch3r46/bootui-typeahead": "*"
+"moonlandsoft/bootui-typeahead": "*"
 ```
 
 to the require section of your `composer.json` file.
