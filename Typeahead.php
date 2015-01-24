@@ -5,7 +5,6 @@ use yii\widgets\InputWidget;
 use yii\helpers\Html;
 use yii\helpers\Json;
 use yii\web\JsExpression;
-use moonland\helpers\JSON;
 /**
  * Typeahead Class Name
  * 
@@ -202,7 +201,7 @@ class Typeahead extends InputWidget
 			$this->limit = count($this->source);
 		
 		$selectored = str_replace('-', '_', $selector);
-		$options1 = JSON::encode($this->clientOptions);
+		$options1 = \moonland\helpers\JSON::encode($this->clientOptions);
 		$options2 = Json::encode(['name' => $selector, 'displayKey' => 'value', 'source' => new JsExpression("$selectored.ttAdapter()")]);
 		$js = "var {$selectored}_data = " . JSON::encode($this->source) . ";".PHP_EOL;
 		
